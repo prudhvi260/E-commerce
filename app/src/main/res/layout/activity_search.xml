@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="15dp"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstRelLayout">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="search for your item"
+            android:id="@+id/edttxtSearchbar"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@id/btnSearch"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_search"
+            android:layout_alignParentRight="true"
+            android:id="@+id/btnSearch"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linerLayout"
+        android:orientation="horizontal"
+        android:layout_below="@id/firstRelLayout"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/firstCategory"
+            android:text="first"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/secondCategory"
+            android:text="second"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/thirdCategory"
+            android:layout_marginLeft="15dp"
+            android:text="third"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="see all categories"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@id/linerLayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:id="@+id/btnAllCategories"/>
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/recyclerview"
+    android:layout_below="@id/btnAllCategories"
+    android:layout_marginTop="20dp">
+</androidx.recyclerview.widget.RecyclerView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomnavigationview"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
+</RelativeLayout>
